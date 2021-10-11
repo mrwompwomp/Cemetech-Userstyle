@@ -55,9 +55,20 @@ if (location.href.includes("cemetech.net/forum/viewtopic.php")) {
     });
 }
 
-//Fix unicode in post titles while listing topics in a subforum and while searching
-if (/cemetech.net\/forum\/(viewforum|search).php/.test(location.href))
+function fixSearchID(PageNode){
+    oldurlParams = new URLSearchParams(document.location.search);
+    newurlParams = new URLSearchParams(PageNode.search);
+    newurlParams.set("search_id", oldurlParams.get('search_id'));
+    PageNode.href = "https://www.cemetech.net/forum/search.php?" + newurlParams.toString();
+}
+
+
+if (/cemetech.net\/forum\/(viewforum|search).php/.test(location.href)) {
+    //Fix unicode in post titles while listing topics in a subforum and while searching
     Array.from(document.querySelectorAll(".topictitle > a")).forEach(titleLink => unescapeEntities(titleLink));
+    //Fix search_id bug in unanswered and other special forum searches
+    Array.from(document.querySelectorAll("#page_content_parent > div:nth-child(5) > div > span.nav > a")).forEach(PageNode => fixSearchID(PageNode));
+}
 
 //Remove empty profile info categories
 Array.from(document.querySelectorAll(".profile_infocat")).forEach(node => {
