@@ -125,9 +125,6 @@ Array.from(document.querySelectorAll(".profile_infocat")).forEach(node => {
     }
 });
 
-//Remove 'Say' button in SAX
-document.getElementById("saxtalk").nextElementSibling.remove();
-
 //Make online names clickable
 const sidebar = document.querySelectorAll("p.sidebar__section-body")[0];
 if (sidebar) {
