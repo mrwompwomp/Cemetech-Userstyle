@@ -1,3 +1,7 @@
+/* look away, nothing to see here yoinked from https://codepen.io/rebelchris/pen/jOMGweo */
+.toggle--checkbox{display:none}.toggle--checkbox:checked+.toggle--label{background:#6b7abb;border-color:#5d6baa}.toggle--checkbox:checked+.toggle--label .toggle--label-background{left:30px;width:3px}.toggle--checkbox:checked+.toggle--label .toggle--label-background:before{width:3px;height:3px;top:-12.5px}.toggle--checkbox:checked+.toggle--label .toggle--label-background:after{width:3px;height:3px;left:-15px;top:10px}.toggle--checkbox:checked+.toggle--label:before{background:#fff;border-color:#e8e8ea;animation-name:switch;animation-duration:350ms;animation-fill-mode:forwards}.toggle--checkbox:checked+.toggle--label:after{transition-delay:350ms;opacity:1}.toggle--label{cursor:pointer;width:100px;height:50px;background:#96dcee;border-radius:50px;border:3px solid #72cce3;display:flex;position:absolute;top:10px;left:10px;transition:all 350ms ease-in}.toggle--label-background{width:5px;height:3px;border-radius:3px;position:relative;background:#fff;left:67.5px;top:22.5px;transition:all 150ms ease-in}.toggle--label-background:before{content:"";position:absolute;top:-3px;width:20px;height:3px;border-radius:3px;background:#fff;left:-10px;transition:all 150ms ease-in}.toggle--label-background:after{content:"";position:absolute;top:3px;width:20px;height:3px;border-radius:3px;background:#fff;left:-5px;transition:all 150ms ease-in}.toggle--label:before{animation-name:reverse;animation-duration:350ms;animation-fill-mode:forwards;transition:all 350ms ease-in;content:"";width:41px;height:41px;border:3px solid #f5eb71;top:2px;left:2px;position:absolute;border-radius:41px;background:#fffaa8}.toggle--label:after{transition-delay:0s;transition:all 250ms ease-in;position:absolute;content:"";box-shadow:#e8e8ea -6.5px 0 0 1px,#e8e8ea -12px 7px 0 -1px;left:71.5px;top:11.5px;width:5px;height:5px;background:0 0;border-radius:50%;opacity:0}@keyframes switch{0%{left:2px}60%{left:2px;width:56px}100%{left:52px;width:41px}}@keyframes reverse{0%{left:52px;width:41px}60%{left:36px;width:56px}100%{left:2px}}
+
+
 /* anti-gradient */
 section.sidebar__section,
 div.mainlowermiddle,
@@ -18,7 +22,7 @@ a.maintitle,
 a.nav,
 aside a,
 a.username,
-li.sax-message a,
+li.sax__message a,
 li.post-datetime a {
 	text-decoration: none !important;
 	background-image: linear-gradient(currentColor, currentColor);
@@ -34,7 +38,7 @@ a.maintitle:hover,
 a.nav:hover,
 aside a:hover,
 a.username:hover,
-li.sax-message a:hover,
+li.sax__message a:hover,
 li.post-datetime a:hover {
 	text-decoration: none !important;
 	background-size: 100% 1px;
@@ -165,8 +169,8 @@ tr > th {
 	width: 14.5rem !important;
 }
 
-.sax-message {
-	font-size: 0.675rem !important;
+.sax__message {
+	font-size: 0.75rem !important;
 }
 
 @media (max-width: 60em) {

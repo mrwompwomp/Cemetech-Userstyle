@@ -1,0 +1,146 @@
+body,
+.sax__message-text>span>a {
+    background-color: #061830;
+}
+
+.sax__username,
+.sax__timestamp {
+    color: #CCC;
+}
+
+.sax__message {
+    border-image: linear-gradient(to right, #bbb, #162840) 1;
+}
+
+.mainbodyinner,
+.aboutsidehead,
+.file-list__item-stats > :nth-child(2n),
+.gsc-tabHeader.gsc-tabhInactive,
+.sax__message--highlighted,
+.gsc-refinementHeader.gsc-refinementhInactive,
+.post {
+    background: #2C394B !important;
+    color: aliceblue;
+}
+
+.gsc-tabHeader.gsc-tabhActive,
+.sax__message:hover,
+.gsc-refinementHeader.gsc-refinementhActive {
+    background: #3C495B !important;
+    color: azure;
+    border-color: #2C394B;
+}
+
+.largetext,
+.smalltext,
+.medtext,
+.awards,
+a.username,
+.gensmall,
+.gsc-result-info,
+.gsc-orderby-label,
+li.post-datetime > a {
+    color: white;
+}
+
+a,
+.gcsc-find-more-on-google {
+    color: #33d6a4;
+}
+
+.gcsc-find-more-on-google-magnifier {
+    fill: #33d6a4;
+}
+
+.glance_contents,
+.post:nth-child(odd),
+table.archives-listing tr:nth-child(even),
+.aboutsidebar,
+#aboutsidebar {
+    background: #334756 !important;
+}
+
+section.sidebar__section,
+div.mainlowermiddle,
+div.mainheadmiddle,
+.navsearchinput,
+.banner_container,
+.spaceRow,
+.file-detail__contents-summary,
+.file-detail__archive-contents-header th,
+.file-detail__review-header,
+.gsc-control-cse,
+.messaging-tabs > a,
+#___gcse_0,
+.mainbody,
+div#hbot {
+    background: #1C4C6B !important;
+    box-shadow: none;
+}
+
+.row2 .post,
+table.archives-listing,
+.archives-listing > thead > tr {
+    border-color: #1C4C6B !important;
+}
+
+.sidebar__section,
+#hbot {
+    border: none;
+}
+
+.navsearchsubmit,
+img[src$="avatar_default.png"],
+img[src$="Cemetech6/images/folders_big.gif"],
+img[src$="Cemetech6/images/folder_big.gif"],
+img[src$="Cemetech6/images/whosonline.gif"],
+img[src$="lang_english/icon_pm.gif"],
+img[src$="lang_english/icon_www.gif"],
+img[src$="lang_english/icon_email.gif"],
+img[src$="lang_english/icon_ticalc.gif"],
+#htop,
+.ppd_graph > img {
+    filter: hue-rotate(194deg);
+}
+
+img[src$="Cemetech6/images/pips/expert.png"] {
+    filter: invert(1);
+}
+
+#htop::after,
+#htop::before {
+    content: "";
+    display: inline-block;
+    border: 12px solid transparent;
+    position: fixed;
+    top: -12px;
+}
+
+#htop::after {
+    border-right: 12px solid #7a3a2f;
+    transform: rotate(45deg);
+    left: -12px;
+}
+
+#htop::before {
+    left: calc(100% - 12px);
+    transform: rotate(135deg);
+    border-right: 12px solid #6f2f1f;
+}
+
+tr > th {
+    border-bottom: 1px solid #1C4C6B !important;
+}
+
+.sax-message a,
+.pips,
+.profile_brief .gen:nth-child(6) {
+    background: #23c694;
+    color: #061830;
+}
+
+.forum-action-button,
+.nav-section__item > h3,
+.nav-section__item > h2 {
+    color: #061830;
+}

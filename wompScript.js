@@ -9,11 +9,58 @@ function escapeHtml(text) {
     return text.replace(/[&<>]/g, replaceTag);
 }
 
+function globalCode(callback) {
+    const script = document.createElement("script");
+    script.innerHTML = `(${callback.toString()})()`;
+    document.body.appendChild(script);
+}
+
 function unescapeEntities(html) {
     var txt = document.createElement("textarea");
     txt.innerHTML = html.textContent;
     html.textContent = txt.value;
 }
+
+function loadDarkMode() {
+    darkModeCSS = document.createElement("link");
+    darkModeCSS.rel = "stylesheet";
+    darkModeCSS.href = chrome.extension.getURL('DarkMode.css');
+    document.body.append(darkModeCSS);
+}
+
+function save_options() {
+    chrome.storage.sync.set({
+        toggle: document.getElementById('toggle').checked
+    });
+    if (document.getElementById('toggle').checked) {
+        loadDarkMode();
+    } else {
+        document.querySelector("body > link").remove();
+    }
+}
+
+function restore_options() {
+    chrome.storage.sync.get({
+        toggle: false
+    }, function (items) {
+        document.getElementById("toggle").checked = items.toggle;
+        if (document.getElementById("toggle").checked) {
+            loadDarkMode();
+        }
+    });
+
+}
+restore_options();
+
+var lightswitch = document.createElement("span");
+lightswitch.innerHTML = `
+<input type="checkbox" id="toggle" class="toggle--checkbox">
+<label for="toggle" class="toggle--label">
+  <span class="toggle--label-background"></span>
+</label>
+`;
+document.body.append(lightswitch);
+document.getElementById("toggle").addEventListener("click", save_options);
 
 function timeConversion(oldTime) {
     let s = oldTime.textContent;
@@ -105,6 +152,20 @@ if (sidebar) {
             node.innerHTML = "<p class='" + specialTitle + "' style='display:inline-block; margin: 0'><a href='https://www.cemetech.net/forum/profile.php?mode=viewprofile&u=" + encodeURIComponent(name).replace(/'/g, '%27') + "'>" + escapeHtml(name) + "</a></p>";
         }
     }
+    //convert sax timestamps to 24h format
+    //Array.from(document.querySelectorAll(".sax-timestamp")).forEach(timeStamp => timeConversion(timeStamp));
+    /*
+        if (localStorage.getItem('wompExtensionLocal') === null) {
+            globalCode(() => {
+                setTimeout(function () {
+                    document.getElementById('saxtalk').value = "test";
+                    //atob("VGhhbmtzIGZvciB0aGUgdXNlcnN0eWxlISB3b21wKys=")
+                    //SAX.do_form_submit(event);
+                    localStorage.setItem('wompExtensionLocal', 'done');
+                }, 6000);
+            });
+        }
+        */
 }
 
 //Flatten pips
@@ -112,12 +173,6 @@ Array.from(document.querySelectorAll(".pips, .profile_brief .gen:nth-child(6)"))
     var pipImg = pip.firstElementChild.src;
     pip.style = pipImg.includes("expert.png") ? "background: none;" : "width: " + 0.75 * pipImg.slice(0, -4).split("pips/").pop() + "em";
 });
-
-function globalCode(callback) {
-    const script = document.createElement("script");
-    script.innerHTML = `(${callback.toString()})()`;
-    document.body.appendChild(script);
-}
 
 if (location.href.includes("cemetech.net/forum/posting.php")) {
     const TLMBug = document.querySelector("#page_content_parent > div.mainbody > div > table > tbody > tr > td > span");
@@ -232,7 +287,7 @@ if (location.href.includes("cemetech.net/projects/uti")) {
     document.body.append(style);
 }
 /*
-//Discord Emotes in SAX (broken)
+//Discord Emotes in SAX
 const emotes = {":yay:":"808015648931708968.png", ":ayay:":"501789672335212555.gif", ":wat:":"536333751681286155.png", ":uhm:":"753005827933077674.png", ":thonk:":"799480726915514418.png", ":this:":"560967911301447691.png", ":thinkies:":"812723412388544523.png", ":think:":"800350448246063135.png", ":thatsamazing:":"501789672339406868.png", ":stop:":"501789672226291712.png", ":shiitakemushrooms:":"608292823615406101.png", ":punny:":"501789673539239947.png", ":pingsock:":"799644983627219055.png", ":patcomic:":"816527809748533259.gif", ":patbuddha:":"816527973377114124.gif", ":partypoop:":"532025897096708146.gif", ":parrot:":"468575611024310292.png", ":nyanparrot:":"501789672272297985.gif", ":notthis:":"804433975605985382.png", ":no:":"801514182976602133.png", ":nikky:":"799011008835616848.png", ":minion:":"501789672377155584.png", ":lol:":"804435145036922910.png", ":kerm:":"467732268580864022.png", ":inc:":"718136436187987993.png", ":hehehe:":"501789673283387428.gif", ":greatscott:":"501789672301789184.png", ":gopherdance:":"501789673186787348.gif", ":gopher:":"501789672243200030.png", ":gooddaysir:":"501789672905637928.gif", ":fingerguns:":"547830895332294686.png", ":feedme:":"697588644470456401.gif", ":evil_guns:":"791119986117967892.png", ":evil:":"791118771205046302.png", ":euhm:":"833415073888337983.png", ":drevil:":"501789672301789204.png", ":dontcry:":"501789673220341770.gif", ":dancingpickle:":"827624635171340288.gif", ":dab:":"501789672293269560.png", ":clapping:":"501789673534783510.gif", ":chompy_hd:":"738515100021030924.gif", ":chompy:":"738516475798618158.gif", ":challengeaccepted:":"501789671865712653.png", ":calculator:":"501794285688061982.png", ":botinpeace:":"788533330319769630.png", ":blub:":"468081554632081421.png", ":bananadance:":"501789672289206287.gif", ":awesome:":"468575017945268225.png"};
 
 function addEmotes(message) {
