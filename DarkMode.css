@@ -1,6 +1,6 @@
 body,
 .sax__message-text>span>a {
-    background-color: #061830;
+    background-color: #070820;
 }
 
 .sax__username,
@@ -74,14 +74,14 @@ div.mainheadmiddle,
 #___gcse_0,
 .mainbody,
 div#hbot {
-    background: #1C4C6B !important;
+    background: #0C3C5B !important;
     box-shadow: none;
 }
 
 .row2 .post,
 table.archives-listing,
 .archives-listing > thead > tr {
-    border-color: #1C4C6B !important;
+    border-color: #0C3C5B !important;
 }
 
 .sidebar__section,
@@ -98,9 +98,10 @@ img[src$="lang_english/icon_pm.gif"],
 img[src$="lang_english/icon_www.gif"],
 img[src$="lang_english/icon_email.gif"],
 img[src$="lang_english/icon_ticalc.gif"],
+img[src$="lang_english/icon_aim.gif"],
 #htop,
 .ppd_graph > img {
-    filter: hue-rotate(194deg);
+    filter: hue-rotate(200deg);
 }
 
 img[src$="Cemetech6/images/pips/expert.png"] {
@@ -129,18 +130,19 @@ img[src$="Cemetech6/images/pips/expert.png"] {
 }
 
 tr > th {
-    border-bottom: 1px solid #1C4C6B !important;
+    border-bottom: 1px solid #2C5C7B !important;
 }
 
 .sax-message a,
 .pips,
 .profile_brief .gen:nth-child(6) {
     background: #23c694;
-    color: #061830;
+    color: #050623;
 }
 
 .forum-action-button,
 .nav-section__item > h3,
+.post-action-button,
 .nav-section__item > h2 {
-    color: #061830;
+    color: #050623;
 }

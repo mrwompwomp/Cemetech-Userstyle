@@ -280,7 +280,7 @@ if (location.href.includes("cemetech.net/forum/posting.php")) {
 //Restyle UTI pages
 if (location.href.includes("cemetech.net/projects/uti")) {
     var style = document.createElement("style");
-    style.innerHTML = "tr>th{border-bottom: 1px solid #254e6f !important;}section.sidebar__section,div.mainlowermiddle,div.mainheadmiddle,div#hbot,.mainbody{background:#254e6f !important;}.sidebar__section,#hbot{border: 2px solid #19364d}a{color: #222}a:hover{color:#34498B}.maintitle:hover,.sidebar__section-body a:hover,.sidebar__section-header a:hover{color: white}.navsearchinput{background:#34498B !important;}img[src*='lang_english'],.navsearchsubmit,.banner_container{filter:hue-rotate(194deg);}.sax-message a{background:#1c264a}";
+    style.innerHTML = "tr>th{border-bottom: 1px solid #254e6f !important;}section.sidebar__section,div.mainlowermiddle,div.mainheadmiddle,div#hbot,.mainbody{background:#254e6f !important;}.sidebar__section,#hbot{border: 2px solid #19364d}a{color: #222}a:hover{color:#34498B}.maintitle:hover,.sidebar__section-body a:hover,.sidebar__section-header a:hover{color: white}.navsearchinput{background:#34498B !important;}img[src*='lang_english'],.navsearchsubmit,#htop{filter:hue-rotate(194deg);}.sax__message a{background:#1c264a}.sax__message {border-image: linear-gradient(to right, #bbb, #162840) 1;}";
     document.body.append(style);
 }
 /*
