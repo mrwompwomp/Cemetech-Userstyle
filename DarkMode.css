@@ -71,6 +71,7 @@ div.mainheadmiddle,
 .file-detail__review-header,
 .gsc-control-cse,
 .messaging-tabs > a,
+table.forumline table table td:first-of-type,
 #___gcse_0,
 .mainbody,
 div#hbot {
@@ -146,3 +147,9 @@ tr > th {
 .nav-section__item > h2 {
     color: #050623;
 }
+
+/* polls */
+table.forumline table table table {
+	background: #23c694;
+}
+
