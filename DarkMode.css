@@ -18,6 +18,7 @@ body,
 .gsc-tabHeader.gsc-tabhInactive,
 .sax__message--highlighted,
 .gsc-refinementHeader.gsc-refinementhInactive,
+.treeview ul,
 .post {
     background: #2C394B !important;
     color: aliceblue;
@@ -25,6 +26,7 @@ body,
 
 .gsc-tabHeader.gsc-tabhActive,
 .sax__message:hover,
+.token_tree,
 .gsc-refinementHeader.gsc-refinementhActive {
     background: #3C495B !important;
     color: azure;
@@ -144,7 +146,8 @@ tr > th {
 .forum-action-button,
 .nav-section__item > h3,
 .post-action-button,
-.nav-section__item > h2 {
+.nav-section__item > h2,
+#edit_type {
     color: #050623;
 }
 
@@ -152,4 +155,3 @@ tr > th {
 table.forumline table table table {
 	background: #23c694;
 }
-
