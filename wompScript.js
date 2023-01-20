@@ -149,20 +149,6 @@ if (sidebar) {
             node.innerHTML = "<p class='" + specialTitle + "' style='display:inline-block; margin: 0'><a href='https://www.cemetech.net/forum/profile.php?mode=viewprofile&u=" + encodeURIComponent(name).replace(/'/g, '%27') + "'>" + escapeHtml(name) + "</a></p>";
         }
     }
-    //convert sax timestamps to 24h format
-    //Array.from(document.querySelectorAll(".sax-timestamp")).forEach(timeStamp => timeConversion(timeStamp));
-    /*
-        if (localStorage.getItem('wompExtensionLocal') === null) {
-            globalCode(() => {
-                setTimeout(function () {
-                    document.getElementById('saxtalk').value = "test";
-                    //atob("VGhhbmtzIGZvciB0aGUgdXNlcnN0eWxlISB3b21wKys=")
-                    //SAX.do_form_submit(event);
-                    localStorage.setItem('wompExtensionLocal', 'done');
-                }, 6000);
-            });
-        }
-        */
 }
 
 //Flatten pips
