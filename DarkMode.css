@@ -155,3 +155,30 @@ tr > th {
 table.forumline table table table {
 	background: #23c694;
 }
+
+/* new profile graphs */
+#user-post-stats text,
+#forum-post-stats text {
+    fill: white !important;
+}
+
+.js-line[style*="stroke: rgb(123, 41, 27)"] {
+    stroke: #23c694 !important;
+}
+
+.js-line[style*="stroke: rgb(255, 127, 14)"] {
+    stroke: #070820 !important;
+}
+
+.hoverlayer > .hovertext > path {
+    fill: #070820 !important;
+}
+
+.hoverlayer > .hovertext > rect {
+    fill: #23c694 !important;
+}
+
+.xgrid,
+.ygrid {
+    stroke: #222 !important;
+}
