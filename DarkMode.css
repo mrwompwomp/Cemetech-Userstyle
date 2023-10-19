@@ -182,3 +182,8 @@ table.forumline table table table {
 .ygrid {
     stroke: #222 !important;
 }
+
+.news-year, .news-month-overview {
+    background-color: #0C3C5B;
+    border: solid #070820 1px;
+}
